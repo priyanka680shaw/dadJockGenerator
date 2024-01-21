@@ -1,0 +1,107 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+@keyframes borderColor {
+    0%{border: 5px solid rgb(0, 255, 110); box-shadow: 5px 5px 7px 7px rgb(214, 38, 38);}
+    25%{border: 8px solid white; box-shadow: 10px  10px 7px 7px rgb(214, 208, 38);}
+    50%{border: 8px solid yellow; box-shadow: 6px 6px 7px 7px rgb(9, 246, 32);}
+    75%{border: 8px solid rgb(255, 0, 0); box-shadow: 8px 8px 7px 7px rgb(246, 30, 192);}
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    /* border: 10px solid red; */
+    background-image: url('../background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerContainer{
+    width: 80vw;
+    height: 70vh;
+    /* border: 5px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgba(68, 77, 75, 0.2);
+    box-shadow: 2px 2px 2px 7px rgb(88, 87, 87);
+    border-radius: 40px;
+    animation-name: borderColor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.content{
+    width: 70%;
+    height: 250px;
+    border: 3px solid red;
+    background-image: linear-gradient(to right, #da25a6 0%, #5b6e8f 51%, #76a45c 100%);;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 40px;
+    text-align: center;
+    animation-name: borderColor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn>button{
+    padding: 30px 100px;
+    /* width: 50%; */
+    border-radius: 20px;
+    margin-top: 30px ; 
+    background-image: linear-gradient(to right, #fbc2eb 0%, #a6c1ee 51%, #fbc2eb 100%);
+    font-size: 40px;
+    font-weight: bold;
+    border-radius: 40px;
+    color: rgb(158, 83, 83);
+    border: none;
+}
+
+.btn>button:hover{
+    background-image: linear-gradient(to right, #FDFC47 0%, #24FE41  51%, #FDFC47  100%);
+    
+}
+
+
+
+
+/***************************************************
+@ media querry
+*****************/
+@media screen and (max-width:1025px){
+    .innerContainer{
+       box-shadow: none;
+       animation: none;
+       background-color: rgba(68, 77, 75, 0.0);
+    }
+
+    .btn>button{
+        padding: 20px ;
+        font-size: 20px;
+        font-weight: bolder;
+    }
+}
+@media screen and (max-width:769){
+    .innerContainer{
+        font-size: 10px;
+    }
+}
+/* @media  screen and (max-width:1024px) {
+    .samedaydelivery{
+       display: none;
+    } */
